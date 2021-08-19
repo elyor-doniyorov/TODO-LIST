@@ -1,9 +1,9 @@
 import './style.css';
 
 const tasks = [
-  { index: 0, description: 'Learn webpack', completed: false },
-  { index: 1, description: 'Read 20 pages of book', completed: false },
-  { index: 2, description: 'Create portfolio', completed: false },
+  { index: 0, description: 'Learn Javascript es6 and webpack', completed: false },
+  { index: 1, description: 'Practice coding challenges', completed: false },
+  { index: 2, description: 'Go to the gym', completed: false },
 ];
 
 const createList = (todo) => {
