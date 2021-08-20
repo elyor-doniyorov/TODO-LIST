@@ -1,4 +1,4 @@
-/* eslint-disable no-restricted-globals, prefer-destructuring, no-unresolved */
+/* eslint-disable no-restricted-globals, prefer-destructuring, import/no-unresolved */
 import './style.css';
 import todoStatusUpdate from './todoStatusUpdate.js';
 import dragDrop from './dragDrop.js';
@@ -86,4 +86,4 @@ const edit = (tasks) => {
   }
 };
 edit(tasks);
-/* eslint-enable no-restricted-globals, prefer-destructuring, no-unresolved */
+/* eslint-enable no-restricted-globals, prefer-destructuring, import/no-unresolved */
