@@ -4,6 +4,8 @@ import todoStatusUpdate from './todoStatusUpdate.js';
 import dragDrop from './dragDrop.js';
 import deleteCompletedTodoItem from './deleteAll.js';
 import addTodo from './addTodo.js';
+import edit from './editTask.js';
+import deleteOne from './deleteOneTask.js'
 
 const tasks = localStorage.getItem('items')
   ? JSON.parse(localStorage.getItem('items'))
@@ -51,39 +53,6 @@ data.forEach((object) => {
   createList(object);
 });
 
-const deleteOne = (tasks) => {
-  const trashIcon = document.querySelectorAll('.fa-trash-alt');
-
-  trashIcon.forEach((icon) => icon.addEventListener('click', () => {
-    const id = icon.parentNode.id;
-
-    tasks.splice(id, 1);
-    for (let i = 0; i < tasks.length; i += 1) {
-      tasks[i].index = i;
-    }
-
-    localStorage.setItem('items', JSON.stringify(tasks));
-    location.reload();
-  }));
-};
-
 deleteOne(tasks);
-
-const edit = (tasks) => {
-  const todoTextSpan = document.querySelectorAll('.text');
-
-  todoTextSpan.forEach((span) => {
-    span.contentEditable = true;
-  });
-
-  for (let i = 0; i < todoTextSpan.length; i += 1) {
-    todoTextSpan[i].addEventListener('keydown', (event) => {
-      if (event.key === 'Enter') {
-        tasks[i].description = todoTextSpan[i].textContent;
-        localStorage.setItem('items', JSON.stringify(tasks));
-      }
-    });
-  }
-};
 edit(tasks);
 /* eslint-enable no-restricted-globals, prefer-destructuring, import/no-unresolved */
