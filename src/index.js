@@ -3,7 +3,7 @@ import './style.css';
 import todoStatusUpdate from './todoStatusUpdate.js';
 import dragDrop from './dragDrop.js';
 import deleteCompletedTodoItem from './deleteAll.js';
-import addTodo from './addTodo.js';
+import addTodo from './addToDo.js';
 import edit from './editTask.js';
 import deleteOne from './deleteOneTask.js';
 
