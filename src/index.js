@@ -1,6 +1,7 @@
 import './style.css';
 import todoStatusUpdate from './todoStatusUpdate.js';
 import dragDrop from './dragDrop.js';
+import addToDo from './addToDo.js'
 
 const tasks = localStorage.getItem('items')
   ? JSON.parse(localStorage.getItem('items'))
