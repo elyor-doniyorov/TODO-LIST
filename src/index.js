@@ -1,14 +1,15 @@
+/* eslint-disable no-restricted-globals, prefer-destructuring, import/no-unresolved */
 import './style.css';
 import todoStatusUpdate from './todoStatusUpdate.js';
 import dragDrop from './dragDrop.js';
+import deleteCompletedTodoItem from './deleteAll.js';
+import addTodo from './addToDo.js';
+import edit from './editTask.js';
+import deleteOne from './deleteOneTask.js';
 
 const tasks = localStorage.getItem('items')
   ? JSON.parse(localStorage.getItem('items'))
-  : [
-    { index: 0, description: 'Learn webpack', completed: false },
-    { index: 1, description: 'Read 20 pages of book', completed: false },
-    { index: 2, description: 'Create portfolio', completed: false },
-  ];
+  : [];
 
 localStorage.setItem('items', JSON.stringify(tasks));
 const data = JSON.parse(localStorage.getItem('items'));
@@ -37,7 +38,7 @@ const createList = (todoItem) => {
   }
 
   const icon = document.createElement('i');
-  icon.classList.add('fas', 'fa-ellipsis-v');
+  icon.classList.add('fas', 'fa-trash-alt');
   todoAppContainer.appendChild(todoItemElement);
   descriptionSpan.innerHTML = todoItem.description;
   todoItemElement.append(checkbox, descriptionSpan, icon);
@@ -45,6 +46,13 @@ const createList = (todoItem) => {
   todoStatusUpdate(tasks);
 };
 
+addTodo(tasks);
+deleteCompletedTodoItem(tasks);
+
 data.forEach((object) => {
   createList(object);
 });
+
+deleteOne(tasks);
+edit(tasks);
+/* eslint-enable no-restricted-globals, prefer-destructuring, import/no-unresolved */

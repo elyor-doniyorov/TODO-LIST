@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   devServer: {
-    contentBase: './dist',
+    static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
