@@ -5,7 +5,7 @@ import dragDrop from './dragDrop.js';
 import deleteCompletedTodoItem from './deleteAll.js';
 import addTodo from './addTodo.js';
 import edit from './editTask.js';
-import deleteOne from './deleteOneTask.js'
+import deleteOne from './deleteOneTask.js';
 
 const tasks = localStorage.getItem('items')
   ? JSON.parse(localStorage.getItem('items'))

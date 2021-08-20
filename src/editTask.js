@@ -15,4 +15,4 @@ const edit = (tasks) => {
   }
 };
 
-export default edit
+export default edit;

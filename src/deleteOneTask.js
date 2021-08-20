@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring, no-restricted-globals */
 const deleteOne = (tasks) => {
   const trashIcon = document.querySelectorAll('.fa-trash-alt');
 
@@ -14,4 +15,5 @@ const deleteOne = (tasks) => {
   }));
 };
 
-export default deleteOne
+export default deleteOne;
+/* eslint-enable prefer-destructuring, no-restricted-globals */
