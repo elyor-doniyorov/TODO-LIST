@@ -1,3 +1,5 @@
+import addToStorage from "./addToStorage";
+
 /* eslint-disable no-unused-vars, no-restricted-globals */
 const addTodoTextToBox = (tasks, createList) => {
   const inputText = document.getElementById('input-text');
@@ -10,7 +12,8 @@ const addTodoTextToBox = (tasks, createList) => {
       };
 
       tasks.push(newItem);
-      localStorage.setItem('items', JSON.stringify(tasks));
+      addToStorage(tasks);
+      inputText.value = '';
       location.reload();
     }
   });
