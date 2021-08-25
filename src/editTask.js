@@ -1,18 +1,20 @@
-const edit = (tasks) => {
+import addToStorage from './addToStorage.js';
+
+const editTodo = (tasks) => {
   const todoTextSpan = document.querySelectorAll('.text');
 
   todoTextSpan.forEach((span) => {
     span.contentEditable = true;
   });
 
-  for (let i = 0; i < todoTextSpan.length; i += 1) {
-    todoTextSpan[i].addEventListener('keydown', (event) => {
+  todoTextSpan.forEach((span, index) => {
+    span.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
-        tasks[i].description = todoTextSpan[i].textContent;
-        localStorage.setItem('items', JSON.stringify(tasks));
+        tasks[index].description = span.textContent;
+        addToStorage(tasks);
       }
     });
-  }
+  });
 };
 
-export default edit;
+export default editTodo;
