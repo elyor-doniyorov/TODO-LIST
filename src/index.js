@@ -2,7 +2,7 @@ import './style.css';
 import todoStatusUpdate from './todoStatusUpdate.js';
 import dragDrop from './dragDrop.js';
 import { deleteOnlyOne, deleteCompletedTodoItem } from './deleteTodo.js';
-import addTodo from './addTodo.js';
+import addTodo from './addToDo.js';
 import addToStorage from './addToStorage.js';
 import editTodo from './editTask.js';
 

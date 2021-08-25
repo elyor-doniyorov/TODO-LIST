@@ -1,9 +1,9 @@
-import addToStorage from "./addToStorage";
+import addToStorage from './addToStorage.js';
 
 /* eslint-disable no-unused-vars, no-restricted-globals */
 const addTodoTextToBox = (tasks, createList) => {
-  const inputText = document.getElementById('input-text');
-  inputText.addEventListener('keyup', (e) => {
+  const inputText = document.getElementById("input-text");
+  inputText.addEventListener("keyup", (e) => {
     if (e.keyCode === 13) {
       const newItem = {
         index: Number(`${tasks.length}`),
@@ -13,7 +13,7 @@ const addTodoTextToBox = (tasks, createList) => {
 
       tasks.push(newItem);
       addToStorage(tasks);
-      inputText.value = '';
+      inputText.value = "";
       location.reload();
     }
   });
