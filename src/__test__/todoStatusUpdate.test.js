@@ -1,8 +1,7 @@
-import { expect } from "@jest/globals";
-import localStorageMock from "../__mocks__/mockLocalStorage.js";
-import todoStatusUpdate from "../__mocks__/mockStatusUpdate.js";
+import localStorageMock from '../__mocks__/mockLocalStorage.js';
+import todoStatusUpdate from '../__mocks__/mockStatusUpdate.js';
 
-describe("todoStatusUpdate", () => {
+describe('todoStatusUpdate', () => {
   const tasks = [
     {
       index: 1,
@@ -18,7 +17,7 @@ describe("todoStatusUpdate", () => {
     },
   ];
 
-  test("should return false if task is completed", () => {
+  test('should return false if task is completed', () => {
     expect(todoStatusUpdate(tasks, 0)).toEqual([
       { completed: true, index: 1 },
       { completed: true, index: 2 },
@@ -38,5 +37,5 @@ describe("todoStatusUpdate", () => {
 
   test('localStorage should update after status change', () => {
     expect(localStorageMock.getItem('data')[0].completed).toBe(true);
-  })
+  });
 });
