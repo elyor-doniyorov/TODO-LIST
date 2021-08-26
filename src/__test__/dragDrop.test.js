@@ -28,10 +28,12 @@ describe('dragDrop', () => {
 
       test('it checks if index are being changed', () => {
           expect(dragDrop(tasks,0,3)[3].description).toBe('Task 1');
+          expect(dragDrop(tasks,1,2)[2].description).toBe('Task 2');
       })
 
      test('check if localstorage is updating the index', () => {
          expect(localStorageMock.getItem('data')[0].description).toBe('Task 4');
+         expect(localStorageMock.getItem('data')[1].description).toBe('Task 3');
      })
 })
 
