@@ -35,6 +35,12 @@ https://rawcdn.githack.com/elyor-doniyorov/TODO-LIST/7fb6e82d3dd7f550cb74447665c
 - Github: [@elyor-doniyorov](https://github.com/elyor-doniyorov)
 - LinkedIn: [@elyor-doniyorov](www.linkedin.com/in/elyor-doniyorov)
 
+## 👤 **Daniel maina**
+
+- GitHub: [@danmainah](https://github.com/danmainah)
+- Twitter: [@Danmainah](https://twitter.com/dan_mainah)
+- LinkedIn: [@Daniel-Maina](www.linkedin.com/in/daniel-maina-315a38191)
+
 
 ## 🤝 Contributing
 
